@@ -1,0 +1,198 @@
+{
+  "quality_case": {
+    "seed": 16,
+    "length": 16,
+    "vocab": 20,
+    "quota": 4,
+    "gold_positions": [
+      5,
+      8,
+      11,
+      14
+    ],
+    "baseline_positions": [
+      6,
+      12,
+      7,
+      4
+    ],
+    "dacs_positions": [
+      6,
+      8,
+      12,
+      4
+    ],
+    "baseline_gold_hits": 0,
+    "dacs_gold_hits": 1,
+    "baseline_trace": {
+      "net_commits": 4,
+      "new_commits": 4,
+      "exchange_count": 0,
+      "exchange_cap": 0,
+      "selected_positions": [
+        6,
+        12,
+        7,
+        4
+      ],
+      "remasked_positions": [],
+      "baseline_positions": [
+        6,
+        12,
+        7,
+        4
+      ],
+      "baseline_overlap_count": 4,
+      "baseline_retention_required": 3,
+      "baseline_retention_passed": true,
+      "input_scope": "explicit_editable_positions",
+      "risk_before": 0.0,
+      "risk_after": 0.0
+    },
+    "dacs_trace": {
+      "net_commits": 4,
+      "new_commits": 4,
+      "exchange_count": 0,
+      "selected_positions": [
+        6,
+        8,
+        12,
+        4
+      ],
+      "remasked_positions": [],
+      "base_positions": [
+        6,
+        8,
+        12,
+        4
+      ],
+      "baseline_positions": [
+        6,
+        12,
+        7,
+        4
+      ],
+      "input_scope": "explicit_editable_positions",
+      "baseline_overlap_count": 3,
+      "baseline_retention_required": 3,
+      "baseline_retention_passed": true,
+      "risk_before": 2.105015195724981,
+      "risk_after": 2.1825618952005534,
+      "tau_t": 13.0,
+      "lambda_t": 0.025,
+      "floor_relaxations": 0,
+      "exchange_cap": 0,
+      "eligible_exchange_count": 0,
+      "exchange_gain_min": 0.0,
+      "exchange_risk_before": 0.0,
+      "exchange_risk_after": 0.0,
+      "strict_exchange_count": 0
+    },
+    "same_quota": true
+  },
+  "native_remask": {
+    "remasked_positions": [
+      0
+    ],
+    "strict_exchange_count": 1,
+    "visible_token_is_remasked": true,
+    "net_commits": 5,
+    "quota": 5
+  },
+  "scope_guard": {
+    "rejected_without_editable_positions": true,
+    "message": "editable_positions is required when current contains visible tokens"
+  },
+  "compatibility": [
+    {
+      "adapter": "native_fixed",
+      "selector": "upstream_topk",
+      "forward_calls": 4,
+      "expected_forward_calls": 4,
+      "expected_cache_refreshes": 0,
+      "cache_refreshes": 0,
+      "net_commits": 16,
+      "exchange_count": 0,
+      "remaining_masks": 0,
+      "schedule_preserved": true
+    },
+    {
+      "adapter": "native_fixed",
+      "selector": "dacs_v5_exchange_020",
+      "forward_calls": 4,
+      "expected_forward_calls": 4,
+      "expected_cache_refreshes": 0,
+      "cache_refreshes": 0,
+      "net_commits": 16,
+      "exchange_count": 0,
+      "remaining_masks": 0,
+      "schedule_preserved": true
+    },
+    {
+      "adapter": "fast_dllm_fixed",
+      "selector": "upstream_topk",
+      "forward_calls": 4,
+      "expected_forward_calls": 4,
+      "expected_cache_refreshes": 4,
+      "cache_refreshes": 4,
+      "net_commits": 16,
+      "exchange_count": 0,
+      "remaining_masks": 0,
+      "schedule_preserved": true
+    },
+    {
+      "adapter": "fast_dllm_fixed",
+      "selector": "dacs_v5_exchange_020",
+      "forward_calls": 4,
+      "expected_forward_calls": 4,
+      "expected_cache_refreshes": 4,
+      "cache_refreshes": 4,
+      "net_commits": 16,
+      "exchange_count": 0,
+      "remaining_masks": 0,
+      "schedule_preserved": true
+    },
+    {
+      "adapter": "fast_dllm_threshold",
+      "selector": "upstream_topk",
+      "forward_calls": 4,
+      "expected_forward_calls": 4,
+      "expected_cache_refreshes": 4,
+      "cache_refreshes": 4,
+      "net_commits": 16,
+      "exchange_count": 0,
+      "remaining_masks": 0,
+      "schedule_preserved": true
+    },
+    {
+      "adapter": "fast_dllm_threshold",
+      "selector": "dacs_v5_exchange_020",
+      "forward_calls": 4,
+      "expected_forward_calls": 4,
+      "expected_cache_refreshes": 4,
+      "cache_refreshes": 4,
+      "net_commits": 16,
+      "exchange_count": 0,
+      "remaining_masks": 0,
+      "schedule_preserved": true
+    }
+  ],
+  "eb_composition": {
+    "host": "eb_sampler",
+    "gamma": 0.24,
+    "quota": 3,
+    "selected_positions": [
+      1,
+      0,
+      2
+    ],
+    "original_eb_bound": 0.24000000000000005,
+    "selected_set_bound": 0.24000000000000005,
+    "bound_metric": "sum(error_proxy[selected])-max(error_proxy[selected])",
+    "baseline_retained": 3,
+    "baseline_retention_required": 3,
+    "quota_preserved": true,
+    "policy": "dacs_v5_quality_guard"
+  },
+  "all_compatibility_checks_pass": true
+}

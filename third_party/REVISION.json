@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/NVlabs/Fast-dLLM",
+  "commit": "a9b81e4caa240c8cad4f7dc1889ff4852a0fca5b",
+  "release": "v1 training-free acceleration",
+  "official_backbones": ["Dream", "LLaDA"],
+  "retrieval": "raw GitHub files pinned to commit; codeload archive was incomplete",
+  "files_retrieved": [
+    "v1/README.md",
+    "v1/requirements.txt",
+    "v1/llada/generate.py",
+    "v1/llada/chat.py",
+    "v1/llada/eval_gsm8k.sh",
+    "v1/dream/eval.py",
+    "v1/dream/eval_gsm8k.sh"
+  ],
+  "adapter_policy": "Only official LLaDA/Dream v1 adapters may enter the Fast-dLLM comparison; LLaDA2 models remain unsupported until an official-compatible adapter is validated."
+}

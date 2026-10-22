@@ -1,0 +1,32 @@
+{
+  "campaign": "dacs_v5_multimodel/steps_64",
+  "public_method": "SETCOMMIT",
+  "steps": 64,
+  "rows": [
+    {
+      "model": "llada_8b_instruct",
+      "task": "gsm8k_cot",
+      "protocol": "fixed_64",
+      "steps": 64,
+      "source_baseline": "results/dacs_v5_multimodel/llada_8b_instruct/gsm8k_cot/topk_uniform/steps_64.json",
+      "source_setcommit": "results/dacs_v5_multimodel/llada_8b_instruct/gsm8k_cot/dacs_v5_exchange_020/steps_64.json",
+      "baseline_method": "topk_uniform",
+      "setcommit_method": "dacs_v5_exchange_020",
+      "baseline_accuracy": 0.6550416982562547,
+      "setcommit_accuracy": 0.6884003032600455,
+      "gain_pp": 3.335860500379084,
+      "baseline_latency_mean_s": 12.235925286505555,
+      "setcommit_latency_mean_s": 12.198662391289718,
+      "latency_ratio_setcommit_over_baseline": 0.9969546320083424,
+      "baseline_nfe": 64,
+      "setcommit_nfe": 64,
+      "baseline_format_valid_rate": null,
+      "setcommit_format_valid_rate": null,
+      "baseline_source_sha256": "14556bb0524bd46bc0bcb44de4c13003f4a4ad9417b7f0399bc8b1858fc379b8",
+      "setcommit_source_sha256": "969657ecaca654868b20b2e47afd2cfad3d49ba14f5bd9c51e7e799ae275856b",
+      "policy_id": "dacs_v5_exchange_020",
+      "public_method": "SETCOMMIT"
+    }
+  ],
+  "case": "LLaDA-8B / GSM8K / fixed 64-forward"
+}

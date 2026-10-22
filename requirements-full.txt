@@ -1,0 +1,9 @@
+# Full LLaDA/Fast-dLLM reproduction. Install the CUDA wheel with
+# requirements-cu121.txt on the paper's CUDA 12.1 environment.
+transformers==4.49.0
+datasets==3.1.0
+lm-eval==0.4.8
+math-verify
+sympy
+huggingface-hub>=0.27,<1
+numpy>=1.24,<3

@@ -1,0 +1,521 @@
+{
+  "schema": 2,
+  "release": "setcommit",
+  "method": "SETCOMMIT: Coordinated Token Commitments",
+  "paper": "iclr2027_conference.pdf",
+  "version": "1.0.0",
+  "legacy_config_mapping": {
+    "dacs_v5_exchange_020": "NATIVE_FAST",
+    "dacs_v5_quality_guard": "EB_QUALITY_GUARD"
+  },
+  "model_assets": {
+    "repo": "GSAI-ML/LLaDA-8B-Instruct",
+    "revision": "08b83a6feb34df1a6011b80c3c00c7563e963b07"
+  },
+  "smoke": {
+    "command": "PYTHON_BIN=<python-with-numpy> bash scripts/verify_release.sh",
+    "result": "examples/smoke_result.json"
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 223,
+      "sha256": "7fbde2f27d1189f34e6b0d518560e5283f327e18c88f0d58dd6aa6eff6c2cec7"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 380,
+      "sha256": "23f0b2bcd63d0161ca9b1cb6e619ceebee8c1531a98fe68a41bba85139c2d24e"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 1459,
+      "sha256": "defff2332e226b1190cd3e606afb064ba5624167b0e8704fb3e556096326d466"
+    },
+    {
+      "path": "COMPATIBILITY.md",
+      "bytes": 651,
+      "sha256": "0d570ed8322fbbbf6385ba75ad561a42b3d6e26e64f7348e4305ba39a51c6bfe"
+    },
+    {
+      "path": "configs/dacs_v5_exchange_020.json",
+      "bytes": 532,
+      "sha256": "bd89e8287d087a775108196e414eb23a4ed2b53aaba7986319161b78c6c304d6"
+    },
+    {
+      "path": "configs/lm_eval_tasks/gsm8k_cot.yaml",
+      "bytes": 993,
+      "sha256": "d49ab62cbbb0cf4be34f125400a1bb87439077fe23c577f5a090e71803b24226"
+    },
+    {
+      "path": "configs/lm_eval_tasks/math500_utils.py",
+      "bytes": 1655,
+      "sha256": "17073c21cf8950c3bbc9d72935ec2234e1310e92364b64c91c0c2f40272a1c04"
+    },
+    {
+      "path": "configs/paper_table3.json",
+      "bytes": 271,
+      "sha256": "416b20365eb3a03b5709cd772575941a9f83168623bebf93637bea4333cdcc0f"
+    },
+    {
+      "path": "configs/policies.json",
+      "bytes": 988,
+      "sha256": "fd1155d681803471ffd6aa8cda5c9ed84ac64d11b3b949e3b02484697d0423ec"
+    },
+    {
+      "path": "configs/setcommit_eb.json",
+      "bytes": 517,
+      "sha256": "b15d1b7923ffe45cac34f0ccc40cf5f0878cdb8e201753d876bda459b461c39a"
+    },
+    {
+      "path": "configs/setcommit_native_fast.json",
+      "bytes": 478,
+      "sha256": "83b500054b408c1b70dba7c8da026eba7d276433e098b2f720dd8858f1449f9b"
+    },
+    {
+      "path": "dacs_method_experiment/__init__.py",
+      "bytes": 75,
+      "sha256": "21492fe77e80afec1564751554d5d7766b444ac898bd167a4222efd8213e820f"
+    },
+    {
+      "path": "dacs_method_experiment/policy.py",
+      "bytes": 2982,
+      "sha256": "d3b79678caceeb1ad5014c13d07dca7297297e3b04bba5a211565eea6559eec6"
+    },
+    {
+      "path": "dacs_method_experiment/sampler.py",
+      "bytes": 27511,
+      "sha256": "8532bbb55de8e5bef1308d25ec7dac0b3faa57805549343858f933d63aa237f4"
+    },
+    {
+      "path": "dacs_method_v5/__init__.py",
+      "bytes": 81,
+      "sha256": "3a752d8dab5bd0b2016dbca67768d167b7fda0b10334abd747b3637ab0a1c7e1"
+    },
+    {
+      "path": "dacs_method_v5/policies.json",
+      "bytes": 988,
+      "sha256": "fd1155d681803471ffd6aa8cda5c9ed84ac64d11b3b949e3b02484697d0423ec"
+    },
+    {
+      "path": "dacs_method_v5/policy.py",
+      "bytes": 747,
+      "sha256": "adbf32071a34186d62144f10a6bc529b43a70d2ec7216c814bfc9852606693dd"
+    },
+    {
+      "path": "dacs_method_v5/sampler.py",
+      "bytes": 14365,
+      "sha256": "89127ff01442019cc3bb1da10a05914376e03cbc105f04e1a3ece10819e280e7"
+    },
+    {
+      "path": "dacs_repro/__init__.py",
+      "bytes": 240,
+      "sha256": "0469e8f7433c3b7cc6693853e8fb487113513743799de45db6546cea0621bd18"
+    },
+    {
+      "path": "dacs_repro/adapter_selection.py",
+      "bytes": 1429,
+      "sha256": "ebd4d1b78eabdc40f6a406da531e9ec1b8df7148818a8752a0eba10ffde0326a"
+    },
+    {
+      "path": "dacs_repro/base_policy.py",
+      "bytes": 2982,
+      "sha256": "d3b79678caceeb1ad5014c13d07dca7297297e3b04bba5a211565eea6559eec6"
+    },
+    {
+      "path": "dacs_repro/policy.py",
+      "bytes": 174,
+      "sha256": "fd51ec4799cb938a0942f0fc711060790bc1014d85ad4d69ecf6f46aa9c627e5"
+    },
+    {
+      "path": "dacs_repro/selector.py",
+      "bytes": 229,
+      "sha256": "364d7eb820b5e2fafd96b6357e45bc37a95e9c6fbe738e7dcd7ac5926ca8eac1"
+    },
+    {
+      "path": "examples/observed_quality_anchors.json",
+      "bytes": 1327,
+      "sha256": "7aa6b3df2eb1137a3fd7239c74a4b2e289c2467d06709c6e582b70d61cd95829"
+    },
+    {
+      "path": "examples/run_smoke.py",
+      "bytes": 10388,
+      "sha256": "007eaf288a137359c3ff5fd47b536397bdc687929df257f6082de4d3593dab99"
+    },
+    {
+      "path": "examples/smoke_result.json",
+      "bytes": 4637,
+      "sha256": "ec01c8447cf5a6090d644281b8485f661322253cfd78aebcff8160e6b03429e4"
+    },
+    {
+      "path": "examples/test_torch_remask.py",
+      "bytes": 1093,
+      "sha256": "d0388140d94285af8fb76026a8f942b9a6d7796f8aa8db6d02de9971e636617a"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1074,
+      "sha256": "89538ac73b9a3ad7a0d2a1d6b3a8a768d935b195368ef9c96a86eae941d5a00f"
+    },
+    {
+      "path": "METHOD.md",
+      "bytes": 4678,
+      "sha256": "bcd80fb202f74b99c27e4a78eee217b144d72f18d2a3a3f34b1fb6321440db51"
+    },
+    {
+      "path": "multimodel_repair/__init__.py",
+      "bytes": 77,
+      "sha256": "ee9856edfe2ee28e5a9ce14d272e309e6801e608ec0d668e2a2836dad36c379c"
+    },
+    {
+      "path": "multimodel_repair/common.py",
+      "bytes": 3144,
+      "sha256": "ca1c5a45170905ff4402e337178ded9ec0df2219972598a2c2629cea8e0e1b94"
+    },
+    {
+      "path": "multimodel_repair/data.py",
+      "bytes": 7463,
+      "sha256": "685019e13abb9e42d94acb1c8b0afc81ab9e75e28ca7c1d6acf5c56c4f1fae3e"
+    },
+    {
+      "path": "multimodel_repair/generation.py",
+      "bytes": 26896,
+      "sha256": "679c314de4feb49b1c32b7cb021de6b27d7a88ca6882924b198d3cdea759debf"
+    },
+    {
+      "path": "multimodel_repair/run_pair.py",
+      "bytes": 11560,
+      "sha256": "50ce2524707c996b515ebb12d81e37c0cbc2a5f9e24efd5d4c4698c773e65ba9"
+    },
+    {
+      "path": "multimodel_repair/scoring.py",
+      "bytes": 5568,
+      "sha256": "bbb7350e4ab4cf6f50b8204be3cd7098e47e6afa48b849151873930703856de8"
+    },
+    {
+      "path": "multimodel_repair/selection.py",
+      "bytes": 7360,
+      "sha256": "cbf6b28cd074d3638dfda64ff140868d6d36c85620814ac186509ad7c67f2701"
+    },
+    {
+      "path": "multimodel_repair/verify.py",
+      "bytes": 9138,
+      "sha256": "3cc258c5691636d5202990a0253e07c61cb92164231279672574035d385441b4"
+    },
+    {
+      "path": "official_protocol_repair_campaign/__init__.py",
+      "bytes": 74,
+      "sha256": "1ac545f097f44b29860c0fcd3d93ce8b084ec174dba7bf2d2811d5bd5782cda4"
+    },
+    {
+      "path": "official_protocol_repair_campaign/configs/lm_eval_tasks/mbpp_utils.py",
+      "bytes": 850,
+      "sha256": "fcda17c03710fc360d7010202bbe46432df5e36d50fc586e7e380e9642a2d6db"
+    },
+    {
+      "path": "official_protocol_repair_campaign/official_sampler.py",
+      "bytes": 3075,
+      "sha256": "20fedf4b1640657867796568a9c5794599598c57ea887612a0db75ccf58de201"
+    },
+    {
+      "path": "prepare_assets.py",
+      "bytes": 3644,
+      "sha256": "264335b3b1556c0a691e9d13fa081f56759d1743d7f83511c8c8a7daaa9ba049"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 381,
+      "sha256": "9fff833e0282abdb341b40d158d8bbb7a09d0acb8eb92a9e43593f1e136009a9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5468,
+      "sha256": "e78e301c2272793ec7765928465c514f9ecbeff8e4f8542ecd75f8ff2197866b"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "bytes": 1890,
+      "sha256": "9741422925f3b3aed68c4c5ae368d94e6400665252f76ead623b55a41016c802"
+    },
+    {
+      "path": "requirements-cu121.txt",
+      "bytes": 101,
+      "sha256": "3e3455d22abc6576e4e760ccc1ccfeca6d1daf0073a42c5b2d74546dff7bb16f"
+    },
+    {
+      "path": "requirements-full.txt",
+      "bytes": 238,
+      "sha256": "4bad73923a49ef149071bb209c4058bbcf4b4d39a983a17d49d3833106be0696"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 15,
+      "sha256": "105a25c9a24a53a42b52ccc93f930e1ea4a88b42372d440ae7c1b82c3a8b2c64"
+    },
+    {
+      "path": "RESULT_PROVENANCE.md",
+      "bytes": 1376,
+      "sha256": "ebf45120d7a14db885aa9aa3871d7a45bc1002bbe04640ad6b3655cedeb5cbb0"
+    },
+    {
+      "path": "scripts/build_manifest.py",
+      "bytes": 1696,
+      "sha256": "d5d7550c5aea05da587e4cefafbef61275191ad7baa969d73e36d9152b0ce48a"
+    },
+    {
+      "path": "scripts/run_llada_pair.sh",
+      "bytes": 643,
+      "sha256": "04e1f120b5319161dd45a6b5d67358b186b0a2578295541762e76be990cac98d"
+    },
+    {
+      "path": "scripts/run_smoke.sh",
+      "bytes": 216,
+      "sha256": "c40c30ff7ea3d04302ab75e3e98c703d2062f116e24f05b766b515ccd23eb7a2"
+    },
+    {
+      "path": "scripts/verify_manifest.py",
+      "bytes": 965,
+      "sha256": "2f9ed3e87eae00f1d8216a138915cec3ea6d918eb99870dcef92a07740c45d6b"
+    },
+    {
+      "path": "scripts/verify_release.sh",
+      "bytes": 684,
+      "sha256": "dfabec7af5ee5f165b2ac95fa12d2679a1a3617e53379a29b7d88bad252331b5"
+    },
+    {
+      "path": "setcommit/__init__.py",
+      "bytes": 884,
+      "sha256": "21dafeda92a66c16e02297b08aa946d0b251254a521cb541b0eef7a7c6d2df14"
+    },
+    {
+      "path": "setcommit/adapters.py",
+      "bytes": 1718,
+      "sha256": "4cc63a97127df0c3d3d4584a6899836551542ca42ea6e9a508042dbee4c69a58"
+    },
+    {
+      "path": "setcommit/eb.py",
+      "bytes": 2446,
+      "sha256": "ec208836dbc8459e839e3997656d7cb664470999973c1c5dc9e4fd0a31709165"
+    },
+    {
+      "path": "setcommit/policy.py",
+      "bytes": 2239,
+      "sha256": "dfa0d4dc7ba3b00f167662d5a5b333857a84d767dd75bcb87849a71e1b8ae72f"
+    },
+    {
+      "path": "setcommit/selector.py",
+      "bytes": 12375,
+      "sha256": "fb9bbd53050b98821c4eb354e719df4aa457671b7f365fe270e916fb490da4d1"
+    },
+    {
+      "path": "third_party/COMMIT",
+      "bytes": 41,
+      "sha256": "75aaebf8a8cecb2cdba68a8ef67c35ccd0715771b94a03dcc21f844331c983ab"
+    },
+    {
+      "path": "third_party/FAST_DLLM_README.md",
+      "bytes": 6553,
+      "sha256": "cc5cdb7b1a0d9cf38bb0b71f393ff88f86e651aa12075eb36fdd792cbcef7c2a"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/dream/eval.py",
+      "bytes": 25854,
+      "sha256": "4f6c6895a65ab057ff1797f488f53af925d65d12910663f18c3fb62d2eda3b52"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/dream/eval_gsm8k.sh",
+      "bytes": 1719,
+      "sha256": "512e6ed7e23c79086ea25a53928f8b61c27e1376ff952a9102bc1f284ca338f3"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/dream/model/__init__.py",
+      "bytes": 822,
+      "sha256": "189ed821ac35d2f757391df7acc932fe70b0bb06b7fcf03f2c1b3fdbfd4dff56"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/dream/model/configuration_dream.py",
+      "bytes": 3235,
+      "sha256": "440686d517b1da9d9b4c47637e85de6f0048b2f8908ff4773923c320402a160f"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/dream/model/generation_utils.py",
+      "bytes": 24606,
+      "sha256": "3b32243c808e77a0e9220f32664f81ff29fe52d8e891cdfdf926b15d516b1bdb"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/dream/model/generation_utils_block.py",
+      "bytes": 28162,
+      "sha256": "20ec315d3509835542d579f73c939d51521e4afd65c5a2444c79a75dec4c5819"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/dream/model/modeling_dream.py",
+      "bytes": 39908,
+      "sha256": "3f0dff3bc5829742703b73bfd40a134bf328fe2b1904985256f2e0e07f40665d"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/dream/model/tokenization_dream.py",
+      "bytes": 14003,
+      "sha256": "51cdeb851db2fda773e81c6c8631a84806089daa9e540430d1079cbb2846474b"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/llada/chat.py",
+      "bytes": 3587,
+      "sha256": "624e5bfec8b86be27a7c1c94b5a1a6bbc4c6b648b1deec83982945eeb8c72e92"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/llada/eval_gsm8k.sh",
+      "bytes": 2698,
+      "sha256": "7ad0f83369fa5cdb4e308aa21868d9ad8a98cd69c195493e24af795f78899439"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/llada/generate.py",
+      "bytes": 19624,
+      "sha256": "aed9a53c61e9ad49c30c45c32da898241845417bd43c12b88c66972e7acbd96a"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/llada/generate_dacs_v5.py",
+      "bytes": 3631,
+      "sha256": "4f2de36fc0efc35e38dc637230b05e32e39e9afd0516f127e87e6e833cf8a520"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/llada/model/__init__.py",
+      "bytes": 826,
+      "sha256": "1e50c30889851f7c96b7e6a0cc220b9e939ac47f9395cf9ef275540d50cf7429"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/llada/model/configuration_llada.py",
+      "bytes": 12835,
+      "sha256": "5a58ffb848ee7fa18c34ca9289d13aaec062d40bae694caa69552689417f7b06"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/llada/model/modeling_llada.py",
+      "bytes": 69012,
+      "sha256": "c60ed78a8f044c885f49c1ba0685b3cbb9c697232b4da85844c4a9cebc426459"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/README.md",
+      "bytes": 6553,
+      "sha256": "cc5cdb7b1a0d9cf38bb0b71f393ff88f86e651aa12075eb36fdd792cbcef7c2a"
+    },
+    {
+      "path": "third_party/fast_dllm_v1/requirements.txt",
+      "bytes": 132,
+      "sha256": "90406a2a9d19bd8f17400bfc1a151a02046a5e0cc92201ea53d89d8941138c44"
+    },
+    {
+      "path": "third_party/LICENSE-APACHE-2.0",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "third_party/llada_generate.py",
+      "bytes": 12091,
+      "sha256": "d4d2d3c015511e63fe9237cd3197346148fb0c795b6c89e0b5ef4846be25252e"
+    },
+    {
+      "path": "third_party/REVISION.json",
+      "bytes": 680,
+      "sha256": "1ce18bf8e8bdb6a7efe30d5b07f15ca793039849d4a367e4ca1734ed0e2a4576"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 670,
+      "sha256": "0bb77e3f9ac10b9f5a259c68b6e9a2bf4477433b966b354333ba8c7748c29da6"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/dream/eval.py",
+      "bytes": 25854,
+      "sha256": "4f6c6895a65ab057ff1797f488f53af925d65d12910663f18c3fb62d2eda3b52"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/dream/eval_gsm8k.sh",
+      "bytes": 1719,
+      "sha256": "512e6ed7e23c79086ea25a53928f8b61c27e1376ff952a9102bc1f284ca338f3"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/dream/model/__init__.py",
+      "bytes": 822,
+      "sha256": "189ed821ac35d2f757391df7acc932fe70b0bb06b7fcf03f2c1b3fdbfd4dff56"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/dream/model/configuration_dream.py",
+      "bytes": 3235,
+      "sha256": "440686d517b1da9d9b4c47637e85de6f0048b2f8908ff4773923c320402a160f"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/dream/model/generation_utils.py",
+      "bytes": 24606,
+      "sha256": "3b32243c808e77a0e9220f32664f81ff29fe52d8e891cdfdf926b15d516b1bdb"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/dream/model/generation_utils_block.py",
+      "bytes": 28162,
+      "sha256": "20ec315d3509835542d579f73c939d51521e4afd65c5a2444c79a75dec4c5819"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/dream/model/modeling_dream.py",
+      "bytes": 39908,
+      "sha256": "3f0dff3bc5829742703b73bfd40a134bf328fe2b1904985256f2e0e07f40665d"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/dream/model/tokenization_dream.py",
+      "bytes": 14003,
+      "sha256": "51cdeb851db2fda773e81c6c8631a84806089daa9e540430d1079cbb2846474b"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/llada/chat.py",
+      "bytes": 3587,
+      "sha256": "624e5bfec8b86be27a7c1c94b5a1a6bbc4c6b648b1deec83982945eeb8c72e92"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/llada/eval_gsm8k.sh",
+      "bytes": 2698,
+      "sha256": "7ad0f83369fa5cdb4e308aa21868d9ad8a98cd69c195493e24af795f78899439"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/llada/generate.py",
+      "bytes": 19624,
+      "sha256": "aed9a53c61e9ad49c30c45c32da898241845417bd43c12b88c66972e7acbd96a"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/llada/generate_dacs_v5.py",
+      "bytes": 3631,
+      "sha256": "4f2de36fc0efc35e38dc637230b05e32e39e9afd0516f127e87e6e833cf8a520"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/llada/model/__init__.py",
+      "bytes": 826,
+      "sha256": "1e50c30889851f7c96b7e6a0cc220b9e939ac47f9395cf9ef275540d50cf7429"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/llada/model/configuration_llada.py",
+      "bytes": 12835,
+      "sha256": "5a58ffb848ee7fa18c34ca9289d13aaec062d40bae694caa69552689417f7b06"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/llada/model/modeling_llada.py",
+      "bytes": 69012,
+      "sha256": "c60ed78a8f044c885f49c1ba0685b3cbb9c697232b4da85844c4a9cebc426459"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/README.md",
+      "bytes": 6553,
+      "sha256": "cc5cdb7b1a0d9cf38bb0b71f393ff88f86e651aa12075eb36fdd792cbcef7c2a"
+    },
+    {
+      "path": "vendor/Fast-dLLM/v1/requirements.txt",
+      "bytes": 132,
+      "sha256": "90406a2a9d19bd8f17400bfc1a151a02046a5e0cc92201ea53d89d8941138c44"
+    },
+    {
+      "path": "vendor/LLaDA/generate.py",
+      "bytes": 12091,
+      "sha256": "d4d2d3c015511e63fe9237cd3197346148fb0c795b6c89e0b5ef4846be25252e"
+    }
+  ]
+}

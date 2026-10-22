@@ -1,0 +1,9 @@
+{
+  "source": "iclr2027_conference.pdf Appendix D Table 3",
+  "native_fast": "configs/setcommit_native_fast.json",
+  "eb": "configs/setcommit_eb.json",
+  "legacy_mapping": {
+    "dacs_v5_exchange_020": "NATIVE_FAST",
+    "dacs_v5_quality_guard": "EB_QUALITY_GUARD"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "method": "SETCOMMIT",
+  "config_id": "dacs_v5_exchange_020",
+  "paper_policy": "NATIVE_FAST",
+  "reliability": "margin",
+  "lambda_start": 0.03,
+  "lambda_end": 0.01,
+  "tau_start": 16.0,
+  "tau_end": 4.0,
+  "shortlist_multiplier": 4.0,
+  "min_topk_overlap": 0.75,
+  "max_penalty_fraction": 0.10,
+  "exchange_ratio": 0.20,
+  "min_posterior_gain": 0.002,
+  "exchange_window": [0.0, 0.8],
+  "exchange_top_k": 2,
+  "structure_protection": false,
+  "risk_budget_scale": null
+}

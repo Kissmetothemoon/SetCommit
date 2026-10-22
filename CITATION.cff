@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: "SetCommit: Coordinated Token Commitments for Few-Step Diffusion Language Model Decoding"
+type: software
+version: 1.0.0
+license: MIT
+message: "If you use this code, please cite the accompanying paper."
+repository-code: "https://github.com/Kissmetothemoon/SetCommit"
+authors:
+  - family-names: Feng
+    given-names: Yuannuo
+    email: ynfeng@buaa.edu.cn
+    affiliation: "Beihang University"
+  - family-names: Ye
+    given-names: Yubing
+    email: taliayeyb@connect.hku.hk
+    affiliation: "University of Hong Kong"
+  - family-names: Yao
+    given-names: Wenshuai
+    email: 2200012654@stu.pku.edu.cn
+    affiliation: "Peking University"
+  - family-names: Chen
+    given-names: Yizhe
+    email: yizhechen@buaa.edu.cn
+    affiliation: "Beihang University"
+  - family-names: Wong
+    given-names: Ngai
+    email: nwong@eee.hku.hk
+    affiliation: "University of Hong Kong"
+  - family-names: Zhou
+    given-names: Wenyong
+    email: wenyongz@connect.hku.hk
+    affiliation: "University of Hong Kong"
+  - family-names: Kang
+    given-names: Wang
+    email: wang.kang@buaa.edu.cn
+    affiliation: "Beihang University"
+abstract: >-
+  Training-free, modular commitment selection for masked diffusion language
+  models. The release reproduces the Native, Fast-dLLM, and entropy-bounded
+  composition interfaces described in the paper.
+keywords:
+  - diffusion language model
+  - masked diffusion
+  - inference acceleration
+  - reproducibility

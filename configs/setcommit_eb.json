@@ -1,0 +1,20 @@
+{
+  "method": "SETCOMMIT",
+  "config_id": "dacs_v5_quality_guard",
+  "paper_policy": "EB_QUALITY_GUARD",
+  "reliability": "posterior",
+  "lambda_start": 0.03,
+  "lambda_end": 0.01,
+  "tau_start": 16.0,
+  "tau_end": 4.0,
+  "shortlist_multiplier": 2.0,
+  "min_topk_overlap": 0.90,
+  "max_penalty_fraction": 0.10,
+  "exchange_ratio": 0.10,
+  "min_posterior_gain": 0.005,
+  "exchange_window": [0.10, 0.60],
+  "exchange_top_k": 2,
+  "structure_protection": true,
+  "structure_penalty": 0.10,
+  "risk_budget_scale": null
+}

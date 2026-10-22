@@ -1,0 +1,25 @@
+{
+  "dacs_v5_topk_control": {"reliability": "posterior", "min_topk_overlap": 1.0, "use_dependency_risk": false},
+  "dacs_v5_margin": {"use_dependency_risk": false},
+  "dacs_v5_risk": {},
+  "dacs_v5_lambda_low": {"lambda_start": 0.01, "lambda_end": 0.0},
+  "dacs_v5_budget": {"risk_budget_scale": 2.0},
+  "dacs_v5_structure": {"structure_protection": true},
+  "dacs_v5_exchange_010": {"exchange": true, "exchange_ratio": 0.10, "min_posterior_gain": 0.002},
+  "dacs_v5_exchange_020": {"exchange": true, "exchange_ratio": 0.20, "min_posterior_gain": 0.002},
+  "dacs_v5_quality_guard": {
+    "exchange": true,
+    "exchange_ratio": 0.10,
+    "min_posterior_gain": 0.005,
+    "exchange_window_start": 0.10,
+    "exchange_window_end": 0.60,
+    "exchange_top_k": 2,
+    "min_topk_overlap": 0.90,
+    "structure_protection": true,
+    "structure_penalty": 0.10,
+    "reliability": "posterior",
+    "shortlist_multiplier": 2.0,
+    "confidence_floor": 0.0,
+    "max_penalty_fraction": 0.10
+  }
+}

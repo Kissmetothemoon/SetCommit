@@ -1,0 +1,19 @@
+# Local environments, credentials, caches and generated model runs
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.cache/
+.pytest_cache/
+.env
+.env.*
+*.pem
+*.key
+models/
+artifacts/
+results/
+build/
+dist/
+*.egg-info/
+.DS_Store
+Thumbs.db
